@@ -1,8 +1,10 @@
-# 🎵 Haluan Mo ng Kanta
+## 🖼️ REMIGIOSOMS✌️ 
 
-## 🔊 Listen to the Song
+> Image hosted via Google Drive (public link).
 
-<audio controls>
-  <source src="https://drive.google.com/uc?export=download&id=1ekeDflKtGuVPD7h46Nvv6FXRErZx3mJ3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1Y-3-TPrdgIzoz7zZunPURjAQRTO_R8rg"
+       alt="Display Image"
+       width="400"
+       style="border-radius:15px; box-shadow:0 0 10px #00ff88;" />
+</p>
