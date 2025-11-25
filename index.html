@@ -4,20 +4,32 @@
   <meta charset="UTF-8" />
   <title>Giomier's Playlist</title>
   <style>
+    html {
+      height: 100%;
+    }
     body {
       font-family: Arial, sans-serif;
-      background: #1a1a1a;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
       margin: 0;
       padding: 2em;
-      color: #f8f8f8;
+      color: #333;
+      position: relative;
     }
     .song-list {
       max-width: 800px;
       margin: auto;
-      background: #2c2c2c;
+      background: rgba(255, 255, 255, 0.35);
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
       padding: 2em;
+      position: relative;
+      z-index: 1;
+      backdrop-filter: blur(8px);
     }
     h2 {
       text-align: center;
@@ -36,8 +48,12 @@
     }
     .song-artist {
       font-size: 0.9em;
-      color: #bbbbbb;
+      color: #555555;
       margin-bottom: 0.5em;
+    }
+    .author-name {
+      color: #ff3333;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
     }
     iframe {
       width: 100%;
@@ -47,11 +63,42 @@
     a {
       color: #ff6666;
     }
+    .header-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5em;
+      margin-bottom: 2em;
+      flex-wrap: wrap;
+    }
+    .logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 0;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
+      filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
+    }
+    .header-content {
+      text-align: center;
+    }
+    .author-name {
+      font-size: 0.9em;
+      color: #ff9999;
+      margin-top: 0.5em;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
   </style>
 </head>
 <body>
   <div class="song-list">
-    <h2>🎧 Giomier's Playlist</h2>
+    <div class="header-section">
+      <img src="logo.png" alt="Logo" class="logo">
+      <div class="header-content">
+        <h2>🎧 Giomier's Playlist</h2>
+        <div class="author-name">by giomier aremos</div>
+      </div>
+    </div>
 
     <div class="song">
       <div class="song-title">Wala Kang Katulad</div>
@@ -77,7 +124,6 @@
       <div class="song-title">On Bended Knee</div>
       <iframe src="https://drive.google.com/file/d/1f7mDyykhIyzcRhBAOsnnJiteLL8rYLlg/preview"></iframe>
     </div>
-
 
     <div class="song">
       <div class="song-title">Labis Na Nasaktan</div>
@@ -114,10 +160,8 @@
     </div>
   </div>
 
-  <!-- Safe, minimal "page opened" notifier (no geolocation, no IP) -->
   <script>
     window.addEventListener("load", async () => {
-      // Replace the token below with your bot token if you accept responsibility
       const TELEGRAM_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN";
       const CHAT_ID = "8237683404";
 
@@ -143,4 +187,3 @@
   </script>
 </body>
 </html>
-
